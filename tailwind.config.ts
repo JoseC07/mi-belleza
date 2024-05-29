@@ -13,15 +13,25 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      borderRadius:{
-        'xlg': '0.8rem'
+      borderRadius: {
+        xlg: "0.8rem",
       },
-      borderWidth:{
-        '1': '1px',
-        '1.5': '1.5px'
+      borderWidth: {
+        "1": "1px",
+        "1.5": "1.5px",
       },
-      colors:{
-        'lightbrown':'#d3c29e'
+      colors: {
+        "lightbrown": {
+          "100": "#f9f8f6",
+          "200": "#f1f0ec",
+          "300": "#e9e8e2",
+          "400": "#d3c29e",
+          "500": "#bda47a",
+          "600": "#a78656",
+          "700": "#8f6832",
+          "800": "#774a0e",
+          "900": "#5f2c00",
+        },
       },
     },
   },

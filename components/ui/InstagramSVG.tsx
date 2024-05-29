@@ -6,7 +6,7 @@ const SvgComponent = (props: React.SVGProps<SVGSVGElement>) => (
         xmlSpace="preserve"
         width={512}
         height={512}
-        fill="#a1a1aa"
+        fill="black"
         viewBox="0 0 24 24"
         {...props}
       >

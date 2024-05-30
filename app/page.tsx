@@ -15,12 +15,15 @@ const pjsB = Plus_Jakarta_Sans({
 export default function Home() {
   return (
     <>
-      <main className="p-20 pt-24" style={{
-  backgroundImage: "url('/white.jpg')",
-  backgroundPosition: 'top',
-  backgroundRepeat: 'no-repeat',
-  backgroundSize: 'cover',
-}}>
+      <main
+        className="p-20 pt-24"
+        style={{
+          backgroundImage: "url('/white.jpg')",
+          backgroundPosition: "top",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+      >
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-5 lg:gap-8">
           <div className="p-2 rounded-lg lg:col-span-2">
             <h1
@@ -28,7 +31,7 @@ export default function Home() {
             >
               Welcome
               <strong
-                className={`${pjs.className} block font-light text-lightbrown-400`}
+                className={`${pjs.className} block font-light text-red-800`}
               >
                 {" "}
                 Book or Walk in{" "}
@@ -38,13 +41,13 @@ export default function Home() {
             <div className="flex flex-row mt-8 max-w-md lg:max-w-lg gap-4 text-center">
               <a
                 href="/services"
-                className="block w-full rounded border-2 border-lightbrown-400 px-4 py-3 text-sm font-medium text-black shadow hover:bg-stone-50 focus:outline-none focus:ring ring-blue-100 sm:w-auto"
+                className="block w-full rounded border-2 border-red-800 px-4 py-3 text-sm font-medium text-black shadow hover:bg-stone-50 focus:outline-none focus:ring ring-blue-100 sm:w-auto"
               >
                 Service Menu
               </a>
               <a
                 href="/services"
-                className="block w-full rounded border-2 border-lightbrown-400 px-8 py-3 text-sm font-medium text-black shadow hover:bg-stone-50 focus:outline-none focus:ring ring-blue-100 sm:w-auto"
+                className="block w-full rounded border-2 border-red-800 px-8 py-3 text-sm font-medium text-black shadow hover:bg-stone-50 focus:outline-none focus:ring ring-blue-100 sm:w-auto"
               >
                 Book Now
               </a>
@@ -63,31 +66,22 @@ export default function Home() {
             </div>
           </div>
           <div className="lg:col-span-3">
-            <Link
-              href="/services"
-              
-            >
+            <Link href="/services">
               <Image
                 alt=""
                 src="/wash.jpg"
                 layout="responsive" // Add layout prop
                 width={300}
                 height={300}
-                className= "rounded-bl-3xl rounded-tr-3xl shadow-2xl hover:shadow-inner hover:shadow-2xl"
+                className="rounded-bl-3xl rounded-tr-3xl shadow-2xl hover:shadow-inner hover:shadow-2xl"
               />
             </Link>
           </div>
         </div>
 
-        <div>
-          Hello
-        </div>
-        <div>
-          Hello
-        </div>
-        <div>
-          Hello
-        </div>
+        <div>Hello</div>
+        <div>Hello</div>
+        <div>Hello</div>
       </main>
     </>
   );

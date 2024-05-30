@@ -1,5 +1,6 @@
 "use client";
-import SalonLogo from "@/public/Salon.png";
+import SalonLogo from "@/public/Salon1x.png";
+import NavMenu from "@/components/NavMenu";
 import InstagramSVG from "@/components/ui/InstagramSVG";
 import PhoneSVG from "@/components/ui/PhoneSVG";
 import MapPin from "@/components/ui/MapPinSVG";
@@ -15,17 +16,6 @@ const pjs = Plus_Jakarta_Sans({
   subsets: ["latin"],
 });
 
-type NavItem = {
-  name: string;
-  path: string;
-};
-
-const navigation: NavItem[] = [
-  { name: "Home", path: "/" },
-  { name: "Services", path: "/services" },
-  { name: "Shop", path: "/shop" },
-  { name: "Book", path: "/book" },
-];
 
 export default function Header() {
   const [percent, setPercent] = useState(0);
@@ -76,7 +66,7 @@ export default function Header() {
         </div>
         
 
-        <div className="absolute left-1/2 top-[4px] transform -translate-x-1/2 z-60">
+        <div className="absolute left-1/2 top-[-5px] transform -translate-x-1/2 z-60">
           <a className="cursor-pointer">
             <h3 className="text-2xl font-medium text-blue-500">
               <Image
@@ -89,17 +79,7 @@ export default function Header() {
           </a>
         </div>
 
-        <div className="flex items-center justify-center flex-row space-x-4 items-center mr-12">
-          {navigation.map((item, index) => (
-            <Link
-              href={item.path}
-              key={index}
-              className={`${pjs.className} text-sm text-black hover:text-lightbrown-400 cursor-pointer transition-colors duration-300`}
-            >
-              {item.name}
-            </Link>
-          ))}
-        </div>
+        <NavMenu></NavMenu>
 
 
       </div>

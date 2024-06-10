@@ -33,6 +33,12 @@ const config: Config = {
           "900": "#5f2c00",
         },
       },
+      height: {
+        "60vh" : "60vh",
+        "70vh" : "70vh",
+        "75vh" : "75vh",
+        "80vh" : "80vh",
+      }
     },
   },
   plugins: [],

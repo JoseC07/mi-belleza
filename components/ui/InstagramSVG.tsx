@@ -1,4 +1,5 @@
 import * as React from "react"
+import Link from "next/link";
 const SvgComponent = (props: React.SVGProps<SVGSVGElement>) => (
   <div className = "flex flex-row items-center space-x-2">
       <svg
@@ -14,7 +15,7 @@ const SvgComponent = (props: React.SVGProps<SVGSVGElement>) => (
         <path d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8z" />
         <circle cx={18.406} cy={5.594} r={1.44} />
       </svg>
-      <a>Instagram</a>
+      <Link href="https://www.instagram.com/mibellezasalon/" target="_blank" className="hover:underline">Instagram</Link>
   </div>
 )
 export default SvgComponent

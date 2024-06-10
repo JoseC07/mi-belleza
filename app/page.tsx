@@ -1,22 +1,11 @@
-import Image from "next/image";
-import Link from "next/link";
-import { Plus_Jakarta_Sans } from "next/font/google";
-const pjs = Plus_Jakarta_Sans({
-  weight: "200",
-  subsets: ["latin"],
-});
-
-const pjsB = Plus_Jakarta_Sans({
-  weight: "400",
-  subsets: ["latin"],
-});
-//home page
-//A p
+import Intro from "@/components/Intro";
+import Landing from "@/components/Landing";
+import MixGallery from "@/components/MixGallery";
 export default function Home() {
   return (
     <>
-      <main
-        className="p-20 pt-24"
+      <Landing></Landing>
+      <section
         style={{
           backgroundImage: "url('/white.jpg')",
           backgroundPosition: "top",
@@ -24,65 +13,40 @@ export default function Home() {
           backgroundSize: "cover",
         }}
       >
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-5 lg:gap-8">
-          <div className="p-2 rounded-lg lg:col-span-2">
-            <h1
-              className={`${pjs.className} text-3xl font-extrabold sm:text-5xl`}
-            >
-              Welcome
-              <strong
-                className={`${pjs.className} block font-light text-red-800`}
-              >
-                {" "}
-                Book or Walk in{" "}
-              </strong>
-            </h1>
-
-            <div className="flex flex-row mt-8 max-w-md lg:max-w-lg gap-4 text-center">
-              <a
-                href="/services"
-                className="block w-full rounded border-2 border-red-800 px-4 py-3 text-sm font-medium text-black shadow hover:bg-stone-50 focus:outline-none focus:ring ring-blue-100 sm:w-auto"
-              >
-                Service Menu
-              </a>
-              <a
-                href="/services"
-                className="block w-full rounded border-2 border-red-800 px-8 py-3 text-sm font-medium text-black shadow hover:bg-stone-50 focus:outline-none focus:ring ring-blue-100 sm:w-auto"
-              >
-                Book Now
-              </a>
-            </div>
-
-            <p className="mt-8  max-w-lg text-zinc-500 sm:text-x underline underline-offset-4">
-              Hours
-            </p>
-            <div className="mt-4  max-w-lg text-zinc-500 sm:text-xl">
-              <div className="mt-2 grid grid-cols-2 gap-4">
-                <p>Monday - Saturday</p>
-                <p>9:00 AM - 7:00 PM</p>
-                <p>Sunday</p>
-                <p>10:00 AM - 2:00 PM</p>
-              </div>
-            </div>
+        <Intro></Intro>
+        <div className="pt-8 px-8 flex justify-center space-x-4 pb-8">
+          <div className="rounded inner-shadow w-2/6 sm:1/4 flex flex-col justify-between">
+            <ul className="list-inside text-center text-sm m-3">
+              <li className="font-bold text-red-800 underline">Men:</li>
+              <li>Haircut</li>
+              <li>Beard Trim</li>
+              <li></li>
+            </ul>
+            <a href="your-link" className="text-center text-red-800 hover:underline text-xs mb-2">Services &rarr;</a>
           </div>
-          <div className="lg:col-span-3">
-            <Link href="/services">
-              <Image
-                alt=""
-                src="/wash.jpg"
-                layout="responsive" // Add layout prop
-                width={300}
-                height={300}
-                className="rounded-bl-3xl rounded-tr-3xl shadow-2xl hover:shadow-inner hover:shadow-2xl"
-              />
-            </Link>
+          <div className="rounded inner-shadow w-2/6 sm:1/4 flex flex-col justify-between">
+            <ul className="list-inside text-center text-sm m-3">
+              <li className="font-bold text-red-800 underline">Women:</li>
+              <li>Haircut</li>
+              <li>Hair Extensions</li>
+              <li>Balayage</li>
+              <li>Color</li>
+              <li>Highlights</li>
+            </ul>
+            <a href="your-link" className="text-center text-red-800 hover:underline text-xs mb-2">Services &rarr;</a>
+          </div>
+          <div className="rounded inner-shadow w-2/6 sm:1/4 flex flex-col justify-between">
+            <ul className="list-inside text-center text-sm m-3">
+              <li className="font-bold text-red-800 underline">Services:</li>
+              <li>Wax</li>
+              <li>Makeup</li>
+              <li>Facial</li>
+              <li>Perm</li>
+            </ul>
+            <a href="your-link" className="text-center text-red-800 hover:underline text-xs mb-2">Services &rarr;</a>
           </div>
         </div>
-
-        <div>Hello</div>
-        <div>Hello</div>
-        <div>Hello</div>
-      </main>
+      </section>
     </>
   );
 }
